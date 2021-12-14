@@ -60,8 +60,8 @@ async function deleteProfile(req, res) {
 
 // Login
 async function login(req, res, next) {
-  //const { walletAddress } = { ...req.body };
-  const walletAddress = '0x245Bd6B5D8f494df8256Ae44737A1e5D59769aB4';
+  const { walletAddress } = { ...req.body };
+  //const walletAddress = '0x245Bd6B5D8f494df8256Ae44737A1e5D59769aB4';
 
   try {
     const response = await checkProfileOnPOH(walletAddress);
