@@ -34,6 +34,12 @@ app.use("/api/carts", cart);
 app.use("/api/shipping", shipping);
 app.use("/api/messages", message);
 
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'Api OK!'
+  })
+})
+
 app.listen(4000, () => {
   console.log("Server running on port 4000");
 });
