@@ -14,7 +14,9 @@ async function getProfile(req, res, _) {
     const profile = await Profile.findOne({ eth_address: walletAddress });
     res.status(200).json(profile);
   } catch (error) {
-    res.status(404);
+    res.status(404).json({
+      message: error
+    });
   }
 }
 
